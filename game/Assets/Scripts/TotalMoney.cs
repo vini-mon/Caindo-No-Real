@@ -7,7 +7,7 @@ public class TotalMoney : MonoBehaviour
 {
 
     public static TotalMoney instance;
-    public Text moneyText;
+    public Text gameText;
 
     int money = 0;
     
@@ -17,11 +17,11 @@ public class TotalMoney : MonoBehaviour
 
     void Start()
     {
-        moneyText.text = "R$ " + money.ToString();
+        gameText.text = "R$ " + money.ToString();
     }
 
     public void AddMoney(){
         money += 100;
-        moneyText.text = "R$ " + money.ToString();
+        gameText.text = "R$ " + money.ToString();
     }
 }
