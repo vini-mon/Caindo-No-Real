@@ -23,5 +23,6 @@ public class TotalMoney : MonoBehaviour
     public void AddMoney(){
         money += 100;
         gameText.text = "R$ " + money.ToString();
+        PlayerPrefs.SetInt("player_money", money);
     }
 }
