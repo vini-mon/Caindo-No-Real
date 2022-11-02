@@ -17,7 +17,6 @@ public class rotação : MonoBehaviour
 
     void Update () {        
         timeElapsed += Time.deltaTime;
-        Debug.Log (timeElapsed);
 
         if(timeElapsed >= delay && rotate == true){
             timeElapsed = 0;
