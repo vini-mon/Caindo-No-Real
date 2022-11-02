@@ -9,7 +9,6 @@ public class ronda : MonoBehaviour
 
     void Update(){
         if(tempo <= 3.0f){
-            Debug.Log(tempo);
             tempo += Time.deltaTime;
             transform.Translate( 0, Time.deltaTime * speed, 0);
             tempo2 = 0.0f;
