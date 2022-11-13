@@ -26,7 +26,10 @@ public class movimentation : MonoBehaviour
 
         if( Input.GetButton("Horizontal") ){
 
-            transform.Translate( Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0, 0);
+            Vector3 moviment = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+
+            // transform.Translate( Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0, 0);
+            transform.position += moviment * Time.deltaTime * speed;
             animator.SetBool("isWalkingLateral", true);
 
             if( Input.GetAxis("Horizontal") < 0 ){
