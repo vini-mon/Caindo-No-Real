@@ -20,6 +20,14 @@ public class TotalMoney : MonoBehaviour
         gameText.text = "R$ " + money.ToString();
     }
 
+    private void OnEnable(){
+        Dollar_99.OnMoneyCollected += AddMoney;
+    }
+    
+    private void OnDisable(){
+        Dollar_99.OnMoneyCollected -= AddMoney;
+    }
+
     public void AddMoney(){
         money += 100;
         gameText.text = "R$ " + money.ToString();
