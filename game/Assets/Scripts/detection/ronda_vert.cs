@@ -21,7 +21,7 @@ public class ronda_vert : MonoBehaviour
 
     void Update(){
 
-        if(tempo <= 3.0f){
+        if(tempo <= 5.0f){
 
             animator.SetBool("isWalkingBack", false);
             animator.SetBool("isWalkingFront", true);
@@ -38,7 +38,7 @@ public class ronda_vert : MonoBehaviour
             transform.Translate( 0, -(Time.deltaTime * speed), 0);
             tempo2 = 0.0f;
         }
-        else if(tempo2 <= 3.0f){
+        else if(tempo2 <= 5.0f){
 
             animator.SetBool("isWalkingFront", false);
             animator.SetBool("isWalkingBack", true);

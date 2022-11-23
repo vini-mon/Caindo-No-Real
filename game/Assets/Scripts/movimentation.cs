@@ -8,7 +8,7 @@ public class movimentation : MonoBehaviour
     public Animator animator;
     public AudioSource audioWalking;
 
-    int speed = 10;
+    public int speed = 10;
     float tempoFootSteps = 0.1f;
 
     void Start()

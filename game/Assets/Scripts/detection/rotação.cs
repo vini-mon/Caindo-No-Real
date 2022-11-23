@@ -12,7 +12,7 @@ public class rotação : MonoBehaviour
     bool rotate = true;
 
     void Start () {
-        myobject = GameObject.Find ("camera").gameObject;
+        myobject = GameObject.Find ("camera_cofre").gameObject;
     }
 
     void Update () {        
