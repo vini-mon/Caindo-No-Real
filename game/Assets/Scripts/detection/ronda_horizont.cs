@@ -20,14 +20,26 @@ public class ronda_horizont : MonoBehaviour
 
     bool turn = true;
 
+    // get value of transform.localScale.x
+
+    // scale_x = transform.localScale.x;
+    // scale_m_x = transform.localScale.x * (-1);
+
     void Update(){
 
-        if(tempo <= 5.0f){
+        if(tempo <= 10.0f){
 
             if( turn ){
 
+                if( transform.localScale.x < 0 ){
+
+                    transform.localScale = new Vector3( transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z );
+
+                }
+
                 turn = false;
-                transform.localScale = new Vector3(0.002f, 0.002f, 1f);
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 1f);
+                // transform.localScale.x *= -1;
 
             }
 
@@ -35,12 +47,17 @@ public class ronda_horizont : MonoBehaviour
             transform.Translate( -(Time.deltaTime * speed), 0, 0);
             tempo2 = 0.0f;
         }
-        else if(tempo2 <= 5.0f){
+        else if(tempo2 <= 10.0f){
 
             if( !turn ){
 
                 turn = true;
-                transform.localScale = new Vector3(-0.002f, 0.002f, 1f);
+                
+                if( transform.localScale.x > 0 ){
+
+                    transform.localScale = new Vector3( transform.localScale.x * (-1), transform.localScale.y, transform.localScale.z );
+
+                }
 
             }
 
