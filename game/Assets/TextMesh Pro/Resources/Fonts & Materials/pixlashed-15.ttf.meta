@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: f6bfbc72d88b1a54c8a0ce3c11cf67fc
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 30
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Pixlashed
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3e30740e9d6c5b248ab2d79fecb74e5e, type: 3}
+  - {fileID: 12800000, guid: 8c6fe1159e723fc4284844879e36cfde, type: 3}
+  - {fileID: 12800000, guid: 86ef2de59220bf040a24be79a5c6eed6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

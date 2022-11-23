@@ -16,7 +16,7 @@ public class EndMoney : MonoBehaviour
 
     void Start(){
         last_run_money = PlayerPrefs.GetInt("player_money");
-        money += last_run_money;
-        moneyText.text = "Dinheiro coletado\nR$ " + money.ToString();
+        money = last_run_money;
+        moneyText.text = "Dinheiro coletado: R$ " + money.ToString();
     }
 }

@@ -6,8 +6,10 @@ public class movimentation : MonoBehaviour
 {
     
     public Animator animator;
+    public AudioSource audioWalking;
 
     int speed = 10;
+    float tempoFootSteps = 0.1f;
 
     void Start()
     {
@@ -28,6 +30,19 @@ public class movimentation : MonoBehaviour
 
             Vector3 moviment = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
 
+            if( tempoFootSteps > 0.0f ){
+
+                tempoFootSteps -= Time.deltaTime;
+
+            }else{
+
+                audioWalking.Play();
+
+                tempoFootSteps = 0.3f;
+
+            }
+
+
             // transform.Translate( Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0, 0);
             transform.position += moviment * Time.deltaTime * speed;
             animator.SetBool("isWalkingLateral", true);
@@ -46,6 +61,20 @@ public class movimentation : MonoBehaviour
         if( Input.GetButton("Vertical") ){
 
             transform.Translate( 0, Input.GetAxis("Vertical") * Time.deltaTime * speed, 0);
+
+            if( ! Input.GetButton("Horizontal") ){
+                if( tempoFootSteps > 0.0f ){
+
+                    tempoFootSteps -= Time.deltaTime;
+
+                }else{
+
+                    audioWalking.Play();
+
+                    tempoFootSteps = 0.3f;
+
+                }
+            }
 
             if( Input.GetAxis("Vertical") < 0 ){
                 animator.SetBool("isWalkingFront", true);
