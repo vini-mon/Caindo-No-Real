@@ -8,7 +8,8 @@ public class detecção : MonoBehaviour
     Coroutine co;
     
     private void OnTriggerEnter2D(Collider2D other){
-        co = StartCoroutine(DetectionTime());
+        if(transform.GetChild(0).gameObject.activeSelf)
+            co = StartCoroutine(DetectionTime());
     }
     private void OnTriggerExit2D(Collider2D other){
         transform.GetChild(0).gameObject.SetActive(true);
