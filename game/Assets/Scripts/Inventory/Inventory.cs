@@ -12,10 +12,12 @@ public class Inventory : MonoBehaviour
 
     private void OnEnable(){
         Bullet_99.OnBulletCollected += Add;
+        ID_Card.OnCardCollected += Add;
     }
 
     private void OnDisable(){
         Bullet_99.OnBulletCollected -= Add;
+        ID_Card.OnCardCollected -= Add;
     }
 
     public void Add(ItemData itemData){
