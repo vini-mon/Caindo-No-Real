@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class falha_detect : MonoBehaviour
+public class falha_camera : MonoBehaviour
 {
     private GameObject myobject;
     public float timeElapsed = 0;
@@ -10,7 +10,7 @@ public class falha_detect : MonoBehaviour
     bool blink = true;
 
     void Start () {
-        Instantiate(myobject, transform.position, Quaternion.identity);
+        myobject = GameObject.Find("camera_door_2").gameObject;
     }
 
     void Update () {        
