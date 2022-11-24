@@ -8,6 +8,12 @@ public class TotalMoney : MonoBehaviour
 
     public static TotalMoney instance;
     public Text gameText;
+    [Header("Component")]
+    public Text timer;
+
+    [Header("Timer Settings")]
+    public float currentTime;
+    public bool countUp;
 
     int money = 0;
     
@@ -18,6 +24,11 @@ public class TotalMoney : MonoBehaviour
     void Start()
     {
         gameText.text = "R$ " + money.ToString();
+    }
+
+    void Update(){
+        currentTime = countUp ? currentTime += Time.deltaTime : currentTime += 0;
+        timer.text = currentTime.ToString("000.00");
     }
 
     private void OnEnable(){

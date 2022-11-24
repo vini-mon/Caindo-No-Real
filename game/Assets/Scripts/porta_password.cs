@@ -30,7 +30,7 @@ public class porta_password : MonoBehaviour
     }
 
     private void liberar(ItemData itemData){
-        if (itemData.ID == 3) contemID = true;
+        if (itemData.ID == 4) contemID = true;
     }
 
     void Update(){
