@@ -14,12 +14,14 @@ public class Inventory : MonoBehaviour
         Bullet_99.OnBulletCollected += Add;
         ID_Card.OnCardCollected += Add;
         Interaction_steal.OnCardStolen += Add;
+        Password.OnPasswordCollected += Add;
     }
 
     private void OnDisable(){
         Bullet_99.OnBulletCollected -= Add;
         ID_Card.OnCardCollected -= Add;
         Interaction_steal.OnCardStolen -= Add;
+        Password.OnPasswordCollected -= Add;
     }
 
     public void Add(ItemData itemData){
