@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interaction : MonoBehaviour
+public class Interaction_steal : MonoBehaviour, ICollectible
 {
+    public static event HandleCardCollected OnCardCollected;
+    public delegate void HandleCardCollected(ItemData itemData);
+    public ItemData cardData;
     bool dentro = false;
     
     private void Awake(){
@@ -22,8 +25,9 @@ public class Interaction : MonoBehaviour
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.E) && (dentro == true)){
-            gameObject.SetActive(false);
+            OnCardCollected?.Invoke(cardData);
+            GetComponent<CircleCollider2D>().enabled = false;
         }
     }
-
+     public void Collect(){}
 }
