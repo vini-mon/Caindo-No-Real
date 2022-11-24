@@ -22,12 +22,12 @@ public class rotação : MonoBehaviour
             timeElapsed = 0;
             rotate = false;
 
-            myobject.transform.Rotate (0.0f, 0.0f, angle);
+            myobject.transform.Rotate (0.0f, 0.0f, -angle);
         }
         else if(timeElapsed >= delay && rotate == false){
             timeElapsed = 0;
             rotate = true;
-            myobject.transform.Rotate (0.0f,0.0f, -angle);
+            myobject.transform.Rotate (0.0f,0.0f, angle);
         }
     }
 }
