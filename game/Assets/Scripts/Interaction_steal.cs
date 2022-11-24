@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Interaction_steal : MonoBehaviour, ICollectible
 {
-    public static event HandleCardCollected OnCardCollected;
+    public static event HandleCardCollected OnCardStolen;
     public delegate void HandleCardCollected(ItemData itemData);
     public ItemData cardData;
     bool dentro = false;
@@ -25,9 +26,11 @@ public class Interaction_steal : MonoBehaviour, ICollectible
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.E) && (dentro == true)){
-            OnCardCollected?.Invoke(cardData);
+            OnCardStolen?.Invoke(cardData);
             GetComponent<CircleCollider2D>().enabled = false;
+            dentro = false;
         }
     }
-     public void Collect(){}
+
+    public void Collect(){}
 }

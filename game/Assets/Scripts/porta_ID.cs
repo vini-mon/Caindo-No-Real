@@ -11,10 +11,12 @@ public class porta_ID : MonoBehaviour
 
     private void OnEnable(){
         ID_Card.OnCardCollected += liberar;
+        Interaction_steal.OnCardStolen += liberar;
     }
 
     private void OnDisable(){
         ID_Card.OnCardCollected -= liberar;
+        Interaction_steal.OnCardStolen -= liberar;
     }
 
     private void Awake(){
