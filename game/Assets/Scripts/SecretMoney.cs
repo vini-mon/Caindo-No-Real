@@ -24,7 +24,7 @@ public class SecretMoney : MonoBehaviour
     void Update(){
         if(Input.GetKeyDown(KeyCode.E) && (dentro == true)){
             transform.GetChild(1).gameObject.SetActive(true);
-            GetComponent<CircleCollider2D>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
             dentro = false;
         }
     }

@@ -8,7 +8,7 @@ public class ronda_vert : MonoBehaviour
     public Animator animator;
     private GameObject myobject;
 
-    int speed = 3;
+    int speed = 5;
     float tempo = 0.0f, tempo2 = 0.0f;
 
     void Start(){
@@ -21,7 +21,7 @@ public class ronda_vert : MonoBehaviour
 
     void Update(){
 
-        if(tempo <= 5.0f){
+        if(tempo <= 7.0f){
 
             animator.SetBool("isWalkingBack", false);
             animator.SetBool("isWalkingFront", true);
@@ -38,7 +38,7 @@ public class ronda_vert : MonoBehaviour
             transform.Translate( 0, -(Time.deltaTime * speed), 0);
             tempo2 = 0.0f;
         }
-        else if(tempo2 <= 5.0f){
+        else if(tempo2 <= 7.0f){
 
             animator.SetBool("isWalkingFront", false);
             animator.SetBool("isWalkingBack", true);

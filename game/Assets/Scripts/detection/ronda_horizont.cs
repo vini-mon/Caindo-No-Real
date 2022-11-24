@@ -7,7 +7,7 @@ public class ronda_horizont : MonoBehaviour
 
     public Animator animator;
 
-    int speed = 3;
+    int speed = 5;
     float tempo = 0.0f, tempo2 = 0.0f;
 
     void Start(){
