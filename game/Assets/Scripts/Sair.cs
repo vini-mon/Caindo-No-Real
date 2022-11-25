@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class botão : MonoBehaviour
+public class Sair : MonoBehaviour
 {
     public Button yourButton;
     public leave exit;
